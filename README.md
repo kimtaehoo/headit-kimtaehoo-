@@ -1,2 +1,0 @@
-# headit-kimtaehoo-
-headit(kimtaehoo)
