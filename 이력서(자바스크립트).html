@@ -4,13 +4,23 @@
 	    <title>
 	       김태후의 이력서 
     	</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script>
+		$(document).ready(function(){
+		$("#abc").click(function(){
+		$("#def").toggle(); //삭제는 remove(); 
+		});
+	});
+</script>
+		<script>
+</script>
 	</head>
 	<body>
 	<table>
 		<h1><strong>이력서</h1></strong>
 			<table border = "2" width="1400">
 			<tr>
-				<th colspan="6" height="100" bgcolor="D5D5D5"><h1>이&nbsp;&nbsp;&nbsp;력&nbsp;&nbsp;&nbsp;서&nbsp;&nbsp;&nbsp; </th><h1>
+				<th colspan="6" height="100" id="th"><h1>이&nbsp;&nbsp;&nbsp;력&nbsp;&nbsp;&nbsp;서&nbsp;&nbsp;&nbsp; </th><h1>
 			</tr>
 			<tr>
 				<td rowspan="5" align="center" height="300" width ="200">사&nbsp;&nbsp;&nbsp;진</br> 3X4cm </td> 
@@ -21,7 +31,7 @@
 				<th colspan="3" bgcolor="D5D5D5">주민등록번호</th>
 			</tr>
 			<tr>
-				<td>(漢文) 金太侯</td>
+				<td>(漢文) 金太厚</td>
 				<td align="center"colspan="3">960802-1111111</td>
 			</tr>
 			<tr>
@@ -34,8 +44,7 @@
 				<th width="200" bgcolor="D5D5D5"> E-Mail</th>
 				<td align="center" colspan="2">popopo6637@naver.com</td>
 			</tr>
-			<tr>
-				<id="ab">
+			<tr id="zxc">
 				<th height="75" bgcolor="D5D5D5"> 주소 </th>
 				<td colspan="5">전라북도 전주시 완산구 효자동3가 1690-6 크리스탈빌</td>
 			</tr>
@@ -45,7 +54,7 @@
 			<tr>
 				<th>학위과정</th> <th>기간</th> <th>학교명</th> <th>전공</th> <th>수료</th> <th>졸업</th>
 			</tr>
-			<tr>
+			<tr id="def">
 				<td></td> <td align="center">2012~2014</td> <td align="right">군산중앙고등학교</td> <td></td> <td></td> <td></td>
 			</tr>
 			<tr>
@@ -93,11 +102,37 @@
 				(인)
 			</tr>
 	</table>
-	<input type="button" id="ab" value="주소불러오기">
-	<script src="./script.js"></script>
-	<input type="button" id="cd" value="학력사항삭제">
-	<script src="./1script.js"></script>
-	<input type="button" id="ef" value="이력서 배경색 바꾸기">
-	<script src="./2script.js"></script>
+	<input type="button" value="주소불러오기" onclick="
+		document.querySelector('');
+	"> </br>
+	<input type="button" value="이력서 색 바꾸기 파랑" onclick="
+		document.querySelector('th').style.backgroundColor = 'blue';
+		"> </br>
+	<input type="button" value="이력서 색 바꾸기 초록" onclick="
+		document.querySelector('th').style.backgroundColor = 'green';
+		"> </br>
+	<input type="button" value="이력서 색 바꾸기 빨강" onclick="
+		document.querySelector('th').style.backgroundColor = 'red';
+		"> </br>
+	<input type="button" value="이력서 색 돌려놓기" onclick="
+		document.querySelector('th').style.backgroundColor = 'white';
+		"> </br>
+	<input type="button" value="안내창 띄우기" onclick="
+		alert('김태후의 이력서 입니다!');
+		"> </br>		
+	<input id="ab" type="button" value="night" onclick="
+		if(document.queryselector('#ab').value === 'night'){
+			document.querySelector('th').style.backgroundColor = 'black';
+			document.querySelector('#ab').value = 'day';
+			} else {
+			document.querySelector('th').style.backgroundColor = 'white';
+			document.querySelector('#ab').value = 'night';
+			}
+	"> </br>
+	<input id="abc" type="button" value="학력사항삭제" >
+	<script
+		src="https://code.jquery.com/jquery-3.4.1.js"
+		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+		crossorigin="anonymous"></script>
 	</body>
 </html>
